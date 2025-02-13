@@ -1,0 +1,181 @@
+:root{
+    --mainColor:#e18c44;
+    --secondaryColor:#4c4848;
+}
+body{
+    font-family: Montserrat, sans-serif;
+}
+.navbar{
+    background-color: var(--mainColor);
+    padding-block: 15px;
+    z-index: 10000000;
+}
+.navbar img{
+    max-width: 150px;
+}
+.navbar-text a, .navbar-text a:focus, .navbar-text a:hover {
+    color: white;
+    padding: 0.5rem;
+    font-size: 15px;
+}
+/* تصميم القائمة عند البداية */
+.dropdown-menu {
+    background-color: var(--mainColor);
+    opacity: 0; 
+    transform: translateY(0); 
+    transition: opacity 1s ease, transform 1s ease;   
+    display: block; 
+}
+
+
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(20px);   
+}
+.dropdown-item:focus, .dropdown-item:hover{
+     background-color: var(--mainColor);
+}
+.dropdown-menu .dropdown-item:hover {
+    color: black !important; /* يجعل النص أسود عند التأشير */
+}
+
+.navbar-text a:hover{
+    color:black;
+}
+.nav-item.dropdown .nav-link, .navbar-text a {
+    transition: color 1s; 
+}
+.nav-item.dropdown:hover .nav-link {
+    color: black !important;
+}
+
+.carousel-item{
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+   
+}
+.carousel-item.slide1{
+    background-image: url(../images/sunon-slider-img.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+.carousel-item.slide2{
+    background-image: url(../images/slide\ 2.jpg);
+
+}
+.carousel-item.slide3{
+    background-image: url(../images/slide33.jpg);
+
+}
+.carousel-item a{
+    background-color: var(--mainColor);
+    color:white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 1s;
+}
+.carousel-item a:hover{
+    background-color:var(--secondaryColor);
+}
+.carousel-caption h1{
+    font-weight: 700;
+    display: inline-block;
+    text-align: start;
+    text-indent: 0;
+    line-height: 1.2;
+}
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 50px; /* حجم المربع */
+    height: 50px; /* حجم المربع */
+    background-color: var(--secondaryColor); /* لون الخلفية */
+    border: 1px solid var(--secondaryColor); /* إضافة البوردر */
+    border-radius: 5px; /* تعديل الزوايا */
+    top: 50%; /* يضع الأسهم في المنتصف عموديًا */
+    transition: background-color 1s;
+    margin:10px;
+}
+.carousel-control-prev:hover, 
+.carousel-control-next:hover{
+    background-color: var(--mainColor);
+}
+.title{
+    text-align: center;
+}
+.latest-products .product h5{
+    color:var(--secondaryColor);
+    transition: color 1s;;
+}
+.latest-products .product h5:hover{
+    color:var(--mainColor);
+    cursor: pointer;
+}
+.image-container{
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color:rgba(240, 230, 220, 0.3);
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+}
+.pro-icons{
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    right: 10px;
+    transform: translateX(20px);
+    transition: opacity 1s ease, transform 1s ease-out;
+    z-index:2;
+}
+.hover-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.image-container:hover .hover-image,
+ .image-container:hover .overlay {
+    opacity: 1;
+}
+.image-container:hover .pro-icons {
+    opacity: 1;
+    transform: translateX(0); /* ✅ تعود لمكانها الطبيعي */
+   
+}
+.pro-icons i{
+   border-radius: 5px;
+   background-color: white;
+   padding: 10px;
+   color: var(--mainColor);
+   transition:all 1s;
+}
+.pro-icons i:hover{
+    background-color: var(--mainColor);
+    color:white;
+}
+/*enhance*/
+.enhance{
+    background-color: #fff2e8;
+}
+.enItem{
+    text-align: center;  
+}
+.enItem h5{
+    font-weight: bold;
+}
+.enItem p{
+    color: #888888;
+    font-size: 15px;
+}
