@@ -1,0 +1,133 @@
+@import url(about.css);
+@import url(main.css);
+
+.girl {
+  position: relative;
+}
+
+.girl .overlay {
+  position: absolute;
+  background-color: rgba(225, 140, 68, 0.7);
+  opacity: 0;
+}
+
+.girl:hover .overlay {
+  opacity: 1;
+}
+
+.short-line {
+  width: 15%;
+  height: 4px;
+  background-color: white;
+}
+
+.balloon {
+  width: 150px;
+  height: 150px;
+  background-color: var(--mainColor);
+  /* اللون الأصفر */
+  border-radius: 50%;
+  animation: blobbing 3s infinite ease-in-out, moveSide 5s infinite linear alternate;
+  transition: all 1s;
+}
+
+@keyframes blobbing {
+
+  0%,
+  100% {
+    border-radius: 50% 35% 55% 40% / 40% 60% 35% 50%;
+  }
+
+  25% {
+    border-radius: 40% 55% 50% 60% / 50% 45% 60% 35%;
+  }
+
+  50% {
+    border-radius: 55% 40% 60% 35% / 35% 55% 40% 60%;
+  }
+
+  75% {
+    border-radius: 45% 60% 35% 50% / 60% 40% 55% 35%;
+  }
+}
+
+@keyframes moveSide {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  60% {
+    transform: translateX(-5px);
+  }
+
+  80% {
+    transform: translateX(15px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.balloon:hover img {
+  transform: scale(1.2);
+}
+
+.balloon:hover {
+  background-color: var(--secondaryColor);
+}
+
+.join-us {
+  background-color: #fff2e8;
+}
+
+.join-us span {
+  color: var(--mainColor)
+}
+
+.services .service{
+  position: relative;
+}
+.info {
+  position: absolute;
+  width: 50%;
+  height: 95%;
+  left: 10px;
+  top: 10px;
+  background-color: rgba(225, 140, 68, 0.7);
+  transition: background-color 1s;
+  box-sizing:border-box;
+ 
+ 
+}
+@media (max-width: 1246px) {
+  .info {
+    width: 90%;
+    margin: auto;
+    height: 90%;
+    position: absolute;
+  }
+}
+.serv3 .info, .serv4 .info{
+  right: 10px;
+  left: auto;
+}
+.service i, .price{
+  background-color: var(--secondaryColor);
+}
+.price{
+  position: absolute;
+  margin-right: 10px;
+}
+.service:hover .info{
+  background-color: rgba(225, 140, 68, 0.9);
+ 
+}

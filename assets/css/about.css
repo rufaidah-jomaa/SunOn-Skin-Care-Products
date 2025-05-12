@@ -1,0 +1,155 @@
+:root {
+    --mainColor: #e18c44;
+    --secondaryColor: #4c4848;
+    --paraColor: #6a6a6a;
+}
+.aboutBackground{
+    background-image: linear-gradient(rgba(225, 140, 68, 0.7),rgba(225, 140, 68, 0.7)),
+    url(../images/bread-2.jpg);
+    background-size: cover;
+    height: 50vh;
+    background-attachment: fixed;
+
+}
+.aboutBackground h2{
+    letter-spacing: 1px;
+}
+.image{
+ position: relative;
+  
+}
+.image img{
+    position: relative;
+    z-index: 2;
+    left: 25px;
+    top:25px;
+}
+.colored{
+    position: absolute;
+    background-color: var(--mainColor);
+   top:0;
+   left:0;
+   bottom: 0;
+   right: 0;
+   z-index: 1;
+}
+.descAbout i{
+font-size:35px;
+color:var(--mainColor)
+}
+.descAbout p{
+    font-size: 15px;
+    color: var(--paraColor);
+   font-weight: 100;
+}
+.testimonials{
+    background-color: #fff2e8;
+  
+}
+.testimonials .carousel-item{
+    height:55vh !important;
+}
+.carousel-indicators button{
+    height: 8px !important;
+    width: 8px !important;
+    border-radius: 50% !important;
+    background-color: transparent !important;
+    border:2px solid var(--mainColor) !important;
+}
+
+
+.testimonials .carousel-item p{
+    color:var(--paraColor);
+}
+.rating i{
+    color:var(--mainColor);
+}
+/**/
+
+.team-image .overlay{
+    position: absolute;
+}
+.team-image {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.team-image img {
+    display: block;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0; /* مخفية في البداية */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay::before,
+.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%; /* كل جزء يغطي نصف الصورة */
+    height: 100%;
+    background: rgba(225, 140, 68, 0.1);
+    transform: scaleX(0); /* تبدأ من الحواف */
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left; /* تبدأ التمدد من الحافة */
+}
+
+.overlay::before {
+    left: 0;
+    transform-origin: left;
+}
+
+.overlay::after {
+    right: 0;
+    transform-origin: right;
+}
+
+.team-image:hover .overlay {
+    opacity: 1;
+}
+
+.team-image:hover .overlay::before,
+.team-image:hover .overlay::after {
+    transform: scaleX(1); /* تمتد حتى المنتصف */
+}
+
+.social-media {
+    width: 100%;
+     position: absolute;
+    bottom:10px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.social-media i{
+    width:40px;
+    height: 40px;
+    border: 1px solid var(--mainColor);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   background-color: var(--mainColor);
+   color:white;
+   transition: background-color 0.5s;
+}
+.social-media i:hover{
+    border:none;
+    background-color:var(--secondaryColor);
+}
