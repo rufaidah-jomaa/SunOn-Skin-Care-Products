@@ -103,7 +103,7 @@
   left: 10px;
   top: 10px;
   background-color: rgba(225, 140, 68, 0.7);
-  transition: background-color 1s;
+  transition: background-color 1s ease;
   box-sizing:border-box;
  
  
